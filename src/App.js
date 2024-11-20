@@ -10,25 +10,29 @@ import Project from "./pages/Project/project";
 import Create from "./pages/Create/create";
 import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
+import {AuthContextProvider} from "./context/AuthContext";
 
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-          <SideBar />
-        <div className="container">
-            <NavBar />
-          <Switch>
-            <Route exact path="/" component={Dashboard} />
-            <Route path="/create" component={Create} />
-            <Route path="/projects/:id" component={Project} />
-            <Route path="/login" component={Login} />
-            <Route path="/signup" component={Signup} />
-          </Switch>
+      <AuthContextProvider>
+        <div className="App">
+          <BrowserRouter>
+              <SideBar />
+            <div className="container">
+                <NavBar />
+              <Switch>
+                <Route exact path="/" component={Dashboard} />
+                <Route path="/create" component={Create} />
+                <Route path="/projects/:id" component={Project} />
+                <Route path="/login" component={Login} />
+                <Route path="/signup" component={Signup} />
+              </Switch>
+            </div>
+          </BrowserRouter>
         </div>
-      </BrowserRouter>
-    </div>
+      </AuthContextProvider>
+
   );
 }
 
