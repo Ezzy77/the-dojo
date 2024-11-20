@@ -9,12 +9,14 @@ import Signup from "./pages/Signup/signup";
 import Project from "./pages/Project/project";
 import Create from "./pages/Create/create";
 import NavBar from "./components/NavBar";
+import SideBar from "./components/SideBar";
 
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+          <SideBar />
         <div className="container">
             <NavBar />
           <Switch>
