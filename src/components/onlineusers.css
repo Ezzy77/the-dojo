@@ -25,3 +25,12 @@
     width: 40px;
     height: 40px;
 }
+
+.user-list .online-user{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #2ecc71;
+    margin-top: 2px;
+}
