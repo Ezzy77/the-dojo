@@ -1,6 +1,7 @@
 import "firebase/firestore";
 import "firebase/auth";
 import firebase from "firebase/app";
+import "firebase/storage";
 // TODO: Add SDKs for Firebase products that you want to use
 
 // Your web app's Firebase configuration
@@ -18,7 +19,8 @@ firebase.initializeApp(firebaseConfig);
 // init service
 const timestamp = firebase.firestore.Timestamp;
 const projectFirestore = firebase.firestore();
+const projectStorage = firebase.storage();
 const projectAuth = firebase.auth();
 
-export { projectFirestore, projectAuth, timestamp };
+export { projectFirestore, projectAuth, timestamp , projectStorage};
 
